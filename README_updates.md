@@ -12,5 +12,5 @@ I made a few simple helpers so newcomers can follow the Flare Data Connector dem
 - **Architecture overview** in `docs/architecture.md` – quick diagram of how everything talks to each other.
 - **Docs in Kiswahili** – angalia `docs/README_sw.md` na `docs/architecture_sw.md` kwa muhtasari na mchoro uliotafsiriwa.
 
-Use whatever piece you need: the notebook if you like notebooks, the script if you live in the terminal, or the viewer if you just want to see the data.
+Use whatever piece you need: the notebook if you like notebooks, the script if you live in the terminal, or the viewer if you just want to see the data. 
 
