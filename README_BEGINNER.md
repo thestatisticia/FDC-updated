@@ -11,10 +11,12 @@ This fork introduces a beginner-friendly toolkit layered on top of the original 
 - `docs/kiswahili/` – Folder containing Kiswahili translations of the onboarding docs.
 - `scripts/bootstrap.ts` – One-command bootstrap (`yarn bootstrap:beginner [--explain]`).
 - `scripts/tutorial/beginnerGuide.ts` – Guided walkthrough (`yarn tutorial:beginner [--dry-run] [--explain]`).
-- `scripts/playground/` – Copy-paste playground snippets.
+- `scripts/playground/` – Copy-paste playground snippets (including offline mock mode).
 - `utils/simpleFdc.ts` – Simple Web2Json wrapper APIs.
 - `test/simpleFdc.test.ts` – Starter tests for the wrapper.
 - `notebooks/beginner_walkthrough.ipynb` – Step-by-step notebook version of the tutorial.
+- `contracts/mock/SimpleProofVerifier.sol` – Minimal verifier used in mock flows.
+- `frontend/mock-viewer.html` – Static viewer for the mock request/proof data.
 
 ## What’s New
 
@@ -23,6 +25,7 @@ This fork introduces a beginner-friendly toolkit layered on top of the original 
 - Bootstrap command to prepare `.env`, defaults, and compilation
 - Playground scripts for fast experimentation
 - FAQ covering frequent mistakes
+- Offline mock mode script for zero-RPC rehearsals
 
 ### Phase 2 – Core Learning
 - Interactive CLI tutorial with dry-run, explain mode, and “What just happened?” recaps
@@ -34,14 +37,17 @@ This fork introduces a beginner-friendly toolkit layered on top of the original 
 - Simple Web2Json wrapper helpers
 - Starter test suite for the wrapper
 - Reusable ASCII progress tracker
+- Simple proof verifier contract + deploy script
+- Mock front-end viewer for the offline data flow
 
 ## Recommended Order
 
 1. Read `docs/quickstart-checklist.md` (or `_sw.md`) and run `yarn bootstrap:beginner`.
 2. Explore `scripts/playground/helloFdc.ts` and `mockAttestation.ts` with `--dry-run`.
-3. Run `yarn tutorial:beginner -- --dry-run --explain` for the guided CLI experience.
-4. Open `notebooks/beginner_walkthrough.ipynb` if you prefer a narrated notebook walkthrough.
-5. Extend `utils/simpleFdc.ts` and its tests as you build custom flows.
+3. Run `yarn playground:offline` to simulate the full flow entirely offline.
+4. Run `yarn tutorial:beginner -- --dry-run --explain` for the guided CLI experience.
+5. Open `notebooks/beginner_walkthrough.ipynb` if you prefer a narrated notebook walkthrough.
+6. Extend `utils/simpleFdc.ts`, `contracts/mock/SimpleProofVerifier.sol`, and the test suite as you build custom flows.
 
 ## Contributing
 

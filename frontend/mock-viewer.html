@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Offline Mock Viewer</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                margin: 2rem;
+                background-color: #f7f7f9;
+                color: #222;
+            }
+            h1 {
+                margin-bottom: 0.5rem;
+            }
+            pre {
+                background-color: #fff;
+                border: 1px solid #ddd;
+                padding: 1rem;
+                overflow-x: auto;
+            }
+            .card {
+                background: #fff;
+                border-radius: 8px;
+                padding: 1.5rem;
+                box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+                margin-bottom: 1.5rem;
+            }
+            button {
+                padding: 0.6rem 1.2rem;
+                border: none;
+                border-radius: 4px;
+                background-color: #0066ff;
+                color: #fff;
+                cursor: pointer;
+            }
+            button:hover {
+                background-color: #0049b5;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Offline Mock Viewer</h1>
+        <p>
+            This page mirrors the mock data used by the offline playground script. Use it to understand the request,
+            response, and proof objects before running anything live.
+        </p>
+
+        <div class="card">
+            <h2>Mock Request</h2>
+            <pre id="request"></pre>
+        </div>
+
+        <div class="card">
+            <h2>Mock Proof</h2>
+            <pre id="proof"></pre>
+            <button id="decode">Decode Response Hex</button>
+            <p id="decodedText"></p>
+        </div>
+
+        <div class="card">
+            <h2>Mock Character Object</h2>
+            <pre id="character"></pre>
+        </div>
+
+        <script type="module">
+            const mockRequest = {
+                url: "https://swapi.dev/api/people/1/",
+                httpMethod: "GET",
+                headers: "{}",
+                queryParams: "{}",
+                body: "{}",
+                postProcessJq: "{name: .name, height: .height, mass: .mass, numberOfFilms: .films | length}",
+            };
+
+            const mockProof = {
+                responseHex: "0x4c756b6520536b7977616c6b6572",
+                merkleProof: ["0xaaaabbbbccccddddeeeeffff0000111122223333444455556666777788889999"],
+            };
+
+            const mockCharacter = {
+                name: "Luke Skywalker",
+                height: 172,
+                mass: 77,
+                films: 4,
+                uid: 1,
+            };
+
+            const requestContainer = document.querySelector("#request");
+            const proofContainer = document.querySelector("#proof");
+            const characterContainer = document.querySelector("#character");
+            const decodedText = document.querySelector("#decodedText");
+            const decodeButton = document.querySelector("#decode");
+
+            requestContainer.textContent = JSON.stringify(mockRequest, null, 2);
+            proofContainer.textContent = JSON.stringify(mockProof, null, 2);
+            characterContainer.textContent = JSON.stringify(mockCharacter, null, 2);
+
+            const hexToUtf8 = hex => {
+                const sanitized = hex.startsWith("0x") ? hex.slice(2) : hex;
+                const bytes = sanitized.match(/.{1,2}/g) ?? [];
+                return decodeURIComponent(
+                    bytes
+                        .map(b => `%${b}`)
+                        .join("")
+                        .replace(/\s+/g, "")
+                );
+            };
+
+            decodeButton.addEventListener("click", () => {
+                try {
+                    decodedText.textContent = `Decoded text: ${hexToUtf8(mockProof.responseHex)}`;
+                } catch (error) {
+                    decodedText.textContent = `Failed to decode: ${error.message}`;
+                }
+            });
+        </script>
+    </body>
+</html>
+

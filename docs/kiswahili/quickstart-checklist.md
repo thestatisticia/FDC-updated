@@ -28,6 +28,7 @@ Matumizi: Fuata hatua hizi kuandaa mazingira yako kabla ya kuendesha skripti za 
 - Chagua skripti ndani ya `scripts/playground/`, mfano `helloFdc.ts`.
 - Endesha `yarn hardhat run scripts/playground/helloFdc.ts --network coston2 --dry-run`.
 - Badili vigezo na uangalie matokeo.
+- Unaweza pia kujaribu `yarn playground:offline` kuiga mchakato bila mtandao.
 
 ## 6. Fanya Mafunzo ya Hatua kwa Hatua
 

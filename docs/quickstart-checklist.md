@@ -36,8 +36,9 @@ _Kwa Kiswahili_: Hariri `.env` na ujaze funguo zako za siri. Usizichapishe hadha
 - Choose a script under `scripts/playground/`, e.g. `helloFdc.ts`.
 - Run `yarn hardhat run scripts/playground/helloFdc.ts --network coston2 --dry-run`.
 - Review the output and try modifying parameters.
+- Optional: run `yarn playground:offline` to simulate the proof flow without any RPC calls.
 
-_Kwa Kiswahili_: Jaribu moja ya hati kwenye `scripts/playground/`. Endesha na mtandao unaofaa na uangalie matokeo.
+_Kwa Kiswahili_: Jaribu moja ya hati kwenye `scripts/playground/`. Endesha na mtandao unaofaa na uangalie matokeo. Unaweza pia kutumia `yarn playground:offline` kuiga mchakato bila mtandao.
 
 ## 6. Explore Tutorials and Docs
 
