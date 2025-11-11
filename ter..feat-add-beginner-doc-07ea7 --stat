@@ -1,0 +1,71 @@
+[33mcommit 26577a1397b1c83fd94c76c2e830400cae97b786[m
+Author: thestatisticia <nmushabe4@gmail.com>
+Date:   Tue Nov 11 16:29:04 2025 +0300
+
+    update
+
+ .env.example                                       |    49 [32m+[m
+ .git-blame-ignore-revs                             |     5 [32m+[m
+ .gitignore                                         |    14 [32m+[m
+ .prettierrc                                        |    24 [32m+[m
+ .solhint.json                                      |    42 [32m+[m
+ CodeDetails.md                                     |   861 [32m++[m
+ FDC -ETHGlobal (1).pdf                             |   Bin [31m0[m -> [32m3065718[m bytes
+ README.md                                          |   277 [32m+[m
+ README_updates.md                                  |    16 [32m+[m
+ contracts/README.md                                |    18 [32m+[m
+ contracts/crossChainFdc/AddressUpdatable.sol       |    86 [32m+[m
+ contracts/crossChainFdc/AddressUpdater.sol         |   229 [32m+[m
+ contracts/crossChainFdc/FdcVerification.sol        |   175 [32m+[m
+ contracts/crossChainFdc/GovernedBaseOld.sol        |   199 [32m+[m
+ contracts/crossChainFdc/GovernedOld.sol            |    16 [32m+[m
+ contracts/crossChainFdc/IFdcVerification.sol       |    23 [32m+[m
+ contracts/crossChainFdc/IIAddressUpdatable.sol     |    20 [32m+[m
+ contracts/crossChainFdc/IIAddressUpdatableOld.sol  |    20 [32m+[m
+ contracts/crossChainFdc/IIAddressUpdater.sol       |    57 [32m+[m
+ contracts/crossChainFdc/README.md                  |     9 [32m+[m
+ contracts/crossChainFdc/Web2Json.sol               |    79 [32m+[m
+ .../fdc/IAddressValidityVerification.sol           |    10 [32m+[m
+ .../IBalanceDecreasingTransactionVerification.sol  |    10 [32m+[m
+ .../IConfirmedBlockHeightExistsVerification.sol    |    10 [32m+[m
+ .../fdc/IEVMTransactionVerification.sol            |    10 [32m+[m
+ .../crossChainFdc/fdc/IJsonApiVerification.sol     |    10 [32m+[m
+ .../crossChainFdc/fdc/IPaymentVerification.sol     |    10 [32m+[m
+ .../IReferencedPaymentNonexistenceVerification.sol |    10 [32m+[m
+ contracts/fdcExample/StarterCounter.sol            |    50 [32m+[m
+ contracts/fdcExample/Web2Json.sol                  |    77 [32m+[m
+ docs/README_sw.md                                  |    61 [32m+[m
+ docs/architecture.md                               |    49 [32m+[m
+ docs/architecture_sw.md                            |    48 [32m+[m
+ docs/issues-checklist.md                           |    31 [32m+[m
+ eslint.config.mjs                                  |    72 [32m+[m
+ frontend/index.html                                |   185 [32m+[m
+ hardhat.config.ts                                  |   201 [32m+[m
+ notebooks/FDC_Web2Json_Walkthrough.ipynb           |   150 [32m+[m
+ package.json                                       |    73 [32m+[m
+ scripts/fdcExample/Web2Json.ts                     |   160 [32m+[m
+ scripts/tutorial/interactiveGuide.ts               |   109 [32m+[m
+ scripts/tutorial/showCharacters.ts                 |    54 [32m+[m
+ scripts/utils/core.ts                              |    55 [32m+[m
+ scripts/utils/fdc.ts                               |   211 [32m+[m
+ scripts/utils/getters.ts                           |   237 [32m+[m
+ scripts/weatherInsurance/minTemp/claimPolicy.ts    |    31 [32m+[m
+ scripts/weatherInsurance/minTemp/config.ts         |     1 [32m+[m
+ scripts/weatherInsurance/minTemp/createPolicy.ts   |    67 [32m+[m
+ scripts/weatherInsurance/minTemp/deployAgency.ts   |    24 [32m+[m
+ scripts/weatherInsurance/minTemp/expirePolicy.ts   |    20 [32m+[m
+ scripts/weatherInsurance/minTemp/resolvePolicy.ts  |   203 [32m+[m
+ .../minTemp/retireUnclaimedPolicy.ts               |    20 [32m+[m
+ scripts/weatherInsurance/weatherId/claimPolicy.ts  |    31 [32m+[m
+ scripts/weatherInsurance/weatherId/config.ts       |     1 [32m+[m
+ scripts/weatherInsurance/weatherId/createPolicy.ts |    67 [32m+[m
+ scripts/weatherInsurance/weatherId/deployAgency.ts |    24 [32m+[m
+ scripts/weatherInsurance/weatherId/expirePolicy.ts |    20 [32m+[m
+ .../weatherInsurance/weatherId/resolvePolicy.ts    |   203 [32m+[m
+ .../weatherId/retireUnclaimedPolicy.ts             |    20 [32m+[m
+ tsconfig.json                                      |    34 [32m+[m
+ utils/README.md                                    |    11 [32m+[m
+ utils/mockData.ts                                  |   161 [32m+[m
+ utils/network.ts                                   |   119 [32m+[m
+ yarn.lock                                          | 10363 [32m+++++++++++++++++++[m
+ 64 files changed, 15532 insertions(+)

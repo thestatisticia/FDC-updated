@@ -24,7 +24,9 @@
     "format:check-solidity": "prettier --check --plugin=prettier-plugin-solidity \"contracts/**/*.sol\"",
     "format:fix-solidity": "prettier --write --plugin=prettier-plugin-solidity \"contracts/**/*.sol\"",
     "-----Testing-----": "echo \"Testing scripts\"",
-    "test": ""
+    "test": "hardhat test",
+    "bootstrap:beginner": "ts-node scripts/bootstrap.ts",
+    "tutorial:beginner": "hardhat run scripts/tutorial/beginnerGuide.ts"
   },
   "devDependencies": {
     "@eslint/js": "^9.24.0",
