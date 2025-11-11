@@ -188,6 +188,7 @@ yarn hardhat run scripts/weatherInsurance/weatherId/resolvePolicy.ts --network c
 - **Simple viewer**: Serve `frontend/index.html` (e.g. `npx serve frontend`) to visualise stored characters or mock results.
 
 ### Extra Docs
+- `README_updates.md`: quick summary of beginner-friendly additions.
 - `docs/README_sw.md`: muhtasari wa README kwa Kiswahili.
 - `docs/architecture_sw.md`: mchoro wa miundombinu uliofafanuliwa kwa Kiswahili.
 - `docs/issues-checklist.md`: orodha ya matatizo ya kawaida na njia za haraka za kuyatatua.
